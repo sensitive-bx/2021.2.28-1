@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+//class代表设计一个类,类后面紧跟着类名称 
+class Circle 
+{
+	//访问权限
+	//公共权限
+public:
+    //属性
+	//半径
+	int r;
+	const double PI = 3.14;
+	//行为
+	//获取圆的周长
+	//通常用一个函数
+	double cal_zc()
+	{
+		return 2*PI*r;
+	} 
+}; 
+int main()
+{
+	Circle c1;//通过圆类，创建具体的圆
+	c1.r = 10;//给圆对象，的属性进行赋值
+	cout << "圆的周长为： " << c1.cal_zc() << endl; 
+	system("pause");
+}
